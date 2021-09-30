@@ -14,3 +14,4 @@ $ git clone [주소]
 	1) $ git pull
 
 내용확인
+내용확인2
