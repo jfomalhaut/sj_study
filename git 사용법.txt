@@ -1,0 +1,14 @@
+Git 사용법 간단요약
+
+1. 저장소 주소를 내 디렉토리에 설치할 때
+$ git clone [주소]
+예) git clone https://github.com/jfomalhaut/sj_study.git
+
+2. 내가 변경한 내용을 올리고 싶을 때
+	1) $ git pull
+	2) $ git add .
+	3) $ git commit -m '내가 하고싶은 말'
+	4) $ git push
+
+3. 내가 변경한 내용을 받고 싶을 때
+	1) $ git pull
