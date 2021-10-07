@@ -1,0 +1,55 @@
+<html>
+  <body>
+    <script>
+      var arr1 = [1,2,3,4,5,3434,3435,676,234];
+      console.log(arr1[3]);
+
+
+      var length = arr1.length;
+      console.log(arr1[length-1]);
+      
+      var arr2 = ['안녕하세요', '저는', '철수입니다'];
+      arr2.push('반가워요');
+      console.log(arr2);
+
+      //숙제
+      //배열에서 특정 순번의 요소를 빼는 방법 
+
+     
+      //배열에서 활용할 수 있는 다양한 기능들 알아오기. 정리해놓기.
+      
+      var fruits = ['사과', '바나나'];
+      //1. 배열 끝에 항목 추가하기
+      fruits.push('오렌지');
+      console.log(fruits);
+      //2. 배열 끝에 항목 삭제하기
+      fruits.pop();
+      console.log(fruits);
+      //3. 배열 맨앞에서 항목 삭제하기
+      fruits.shift();
+      console.log(fruits);
+      //4. 배열 맨앞에서 항목 추가하기
+      fruits.unshift('사과');
+      console.log(fruits);
+      //5. 배열 안 항목의 인덱스 찾기
+      fruits.push('망고');
+      let findIndex = fruits.indexOf('바나나');
+      console.log(findIndex);
+      //6. 특정 위치에 있는 항목 제거하기
+      let removedItem = fruits.splice(findIndex,1);
+      console.log(removedItem);
+      //7. 특정 위치에서 여러개 항목 제거하기
+      let vegetables = ['양배추', '순무', '무', '당근']
+      let pos = 1
+      let n = 2
+
+      let removedItems = vegetables.splice(pos, n);
+      //8. 배열 복사하기
+      let shallowCopy = vegetables.slice();
+      console.log(shallowCopy);
+     
+
+
+    </script>
+  </body>
+</html>
