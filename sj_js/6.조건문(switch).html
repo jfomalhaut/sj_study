@@ -1,0 +1,47 @@
+<html>
+  <body>
+    <script>
+
+      var score = prompt('당신의 불어점수를 입력하세요(0~99)') * 1; //89
+      var score2 = score / 10; //8.9
+      var after = Math.floor(score2);
+      console.log(after);
+
+    // 숙제  
+    // 90 ~ 99 A
+		// 80 ~ 89 B
+		// 70 ~ 79 C
+		// 60 ~ 69 D
+		// 50 ~ 59 E
+		// 그 외 F
+      
+    switch(after) {
+			case 9: {
+				console.log('A등급 입니다');
+				break;
+			}
+      case 8: {
+        console.log('B등급 입니다');
+        break;
+      }
+      case 7: {
+        console.log('C등급 입니다');
+        break;
+      }
+      case 6: {
+        console.log('D등급 입니다');
+        break;
+      }
+      case 5: {
+        console.log('E등급 입니다');
+        break;
+      }
+      default: {
+        console.log('F등급 입니다');
+        break;
+      }
+		}
+    
+    </script>
+  </body>
+</html>

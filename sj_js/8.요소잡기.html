@@ -1,0 +1,27 @@
+<html>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background: dodgerblue;
+      margin: 100px auto;
+    }
+  </style>
+  <body>
+  <div id="box">ß
+
+  </div>
+  <script>
+    var box = document.getElementById('box');
+
+
+    function onClickBox() {
+      box.style.backgroundColor = 'tomato';
+    }
+
+    box.addEventListener('click', onClickBox )
+
+  </script>
+
+  </body>
+</html>
