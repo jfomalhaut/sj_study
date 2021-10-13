@@ -1,0 +1,78 @@
+<html>
+<head>
+	<style>
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		li { list-style: none; }
+
+		article {
+			width: 1200px;
+			margin: 100px auto;
+		}
+		ul {
+			display: flex;
+			gap: 20px;
+			/* justify-content: space-between; */
+		}
+		li {
+			width: 100%;
+			/* width: calc((100% - 50px * 3) / 4); */
+		}
+		li img {
+			width: 100%;
+		}
+		
+		ol {
+			overflow: hidden;
+		}
+		
+		li {
+			width: calc((100% - 20px * 3) / 4);
+			float: left;
+			margin-right: 20px;
+			/* background: yellowgreen; */
+		}
+
+		li:nth-child(4n) {
+			margin-right: 0;
+		}
+
+		figure {
+			height: 320px;
+			/* background: dodgerblue; */
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+
+		li:nth-child(1) figure {background-image: url('img/image1.jpeg');}
+		li:nth-child(2) figure {background-image: url('img/image2.jpeg');}
+		li:nth-child(3) figure {background-image: url('img/image3.jpeg');}
+		li:nth-child(4) figure {background-image: url('img/image4.jpeg');}
+
+	</style>
+</head>
+<body>
+	<section>
+		<article>
+			<ol>
+				<li>
+					<figure></figure>
+					<h1>Hello</h1>
+				</li>
+				<li>
+					<figure></figure>
+					<h1>Hello</h1>
+				</li>
+				<li>
+					<figure></figure>
+					<h1>Hello</h1>
+				</li>
+				<li>
+					<figure></figure>
+					<h1>Hello</h1>
+				</li>
+			</ol>
+		</article>
+	</section>
+</body>
+</html>
