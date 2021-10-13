@@ -32,10 +32,6 @@ img {
   width: 100%;
 }
 
-/* section:first-child {
-  height: 100%;
-} */
-
 header {
   margin: 0 0 20px 0;
 }
@@ -145,26 +141,23 @@ section h3 {
   padding: 79px 0 35px 0;
 }
 
-.goods {
+article {
   width: 100%;
-  display: flex;
+  margin: 0 auto;
 }
 
-.list {
-  width: 100%;
+.goods_ul {
+  display: flex; 
+  flex-wrap: wrap;  
+  justify-content: center;
+  gap: 20px;
 }
 
-.thumb {
+.type_1 .thumb {
   width: 249px;
   height: 320px;
-  /* background-image: url("https://img-cf.kurly.com/shop/data/goods/1567563159964l0.jpg"); */
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.type_1 img {
-  width: 249px;
-  height: 320px;
+  background-image: url("	https://img-cf.kurly.com/shop/data/goods/1470278102426l0.jpg");
+  background-size: cover;  
 }
 
 .info {
@@ -175,16 +168,16 @@ section h3 {
   margin: 15px 0;
 }
 
-.discount {
+.dc {
   font-weight: 800;
   margin-bottom: 4px;
 }
 
-.discount span:first-child {
+.dc span:first-child {
   color: #fa622f;
 }
 
-.non_discount {
+.none_dc {
   font-size: 14px;
   color: #999;
   text-decoration:line-through;
@@ -195,67 +188,188 @@ section h3 {
   padding-bottom: 120px;
 }
 
-.type_2 img {
+.type_2 .thumb {
   width: 338px;
   height: 338px;
+  background-image: url('https://img-cf.kurly.com/shop/data/main/3/pc_img_1632908257.jpg');
+  background-size: cover;
 }
 
 .type_2 .info {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin: 20px 0;
+  letter-spacing: 0.3px;
+}
+
+.type_2 .info .name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.type_2 .info .desc {
+  margin-top: 5px;
+  color: #999999;
+  font-size: 16px;
 }
 
 .category_md_list {
-  width: 1050px;
-  display: flex;
-  flex-wrap: wrap;
+  width: 860px;
   margin: 0 auto;
-  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .category_md_list li {
   border: 1px solid #f7f7f6;
   background-color: #f7f7f7;
   padding: 10px 20px;
-  margin: 10 20px;
+  margin: 10px 5px;
   color: #333;
   border-radius: 20px;
   font-size: 14px; 
   text-align: center;
-
 }
 
 .link_md {
   width: 40%;
   margin: 0 auto;
   margin-top: 20px;
+  margin-bottom: 150px;
   border: 1px solid #e3e3e3;
   text-align: center;
   padding: 15px;
 }
 
-.type_3 img {
+.type_3 .thumb {
   width: 338px;
   height: 225px;
+  background-image: url('https://img-cf.kurly.com/shop/data/board/recipe/m/main_v2_994b2d276f3f5efe.jpg');
+  background-size: cover;
 }
 
-.type_4 img {
+.type_3 .info .name {
+  text-align: center;
+}
+
+.type_4 .thumb {
   width: 175px;
   height: 175px;
 }
 
-.type_4 .info {
-  width: 100%;
+.type_4 .goods_ul {
+  gap: 0;
+}
+
+.insta_review {
   text-align: center;
-  margin-top: 30px;
+  padding: 40px 0 80px 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.type_4 .info div {
-  color: #999;
-  margin-bottom: 8px;
+.insta_review span {
+  color: #999999;
+  margin-bottom: 10px;
 }
 
-.type_4 .goods {
+.insta_link {
+  font-weight: 700;
+}
+
+.row:nth-child(1) {
+  /* background-color: pink; */
+}
+
+.row:nth-child(2) {
+  background-color: yellow;
+}
+
+.row {
+  display: flex;
+  padding: 20px 0px;
+}
+
+.column {
+  width: 50%;
+}
+
+.column h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.help_total {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.help {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.help .tit {
+  width: 140px;
+  font-size: 14px;
+}
+
+.help .detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.help .tit {
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  height: 40px;
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.call .tit {
+  border-style: none;
+  display: block;
+}
+
+.call .tit:first-child {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.help .detail span:first-child {
+  font-size: 15px;
+}
+.help .detail span:nth-child(2) {
+  font-size: 14px;
+  color: #999;
+}
+
+.intro {
+  display: flex;
+  gap: 20px;
+}
+
+.copy {
+  color: #949296;
+  font-size: 10px;
+}
+
+
+
+.sns ul {
+  display: flex;
+  gap: 8px;
+}
+
+.sns img {
+  width: 30px;
+  height: 30px;
 }

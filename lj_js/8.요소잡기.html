@@ -1,0 +1,29 @@
+<html>
+<head>
+	<style>
+		#box {
+			width: 200px;
+			height: 200px;
+			background: dodgerblue;
+			margin: 100px auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+
+	<script>
+
+		var box = document.getElementById('box');
+
+		box.style.backgroundColor = 'tomato';
+
+		function onClickBox() {
+			console.log('box를 클릭하셨습니다');
+		}
+
+		box.addEventListener('click', onClickBox);
+
+	</script>
+</body>
+</html>

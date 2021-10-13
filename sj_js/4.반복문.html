@@ -1,0 +1,38 @@
+<html>
+  <body>
+    <script>
+      var students =['철수', '경수', '민수', '영수', '광수', '준수', '진수', '창수'];
+      //당신은 담임 선생님입니다.
+      //지금은 출석시간입니다.
+      //반 아이들의 이름을 한번씩 불러주세요.
+      
+      var length = students.length;
+      for (var i = 0; i < length; i++) { 
+        console.log(students[i]);
+      }
+
+      //2단만들기
+
+      for(var i = 0; i < 10; i++) {
+        var a = '2';
+        console.log(a+"x"+i+"="+a*i);
+      }
+
+      for(var i = 0; i < 10; i++){
+        for(var m = 2; m < 10; m++) {
+          console.log(m+'x'+i+'='+m*i)
+        }
+      }
+
+      //9단만들기
+      console.log('----------------------------------------------------');
+      for(var m = 2; m < 10; m++) {
+        for(var i = 0; i < 10; i++) {
+          console.log(m+'x'+i+'='+m*i)
+          
+        }
+      }
+      
+    </script>
+  </body>
+</html>

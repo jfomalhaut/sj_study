@@ -1,0 +1,87 @@
+<html>
+<head>
+	<style>
+		header {
+			text-align: center;
+			line-height: 100px;
+			height: 100px;
+			width: 100%;
+			position: fixed;
+			left: 0; top: 0;
+			z-index: 2000;
+			border-bottom: 1px solid #ddd;
+			background: rgba(255, 255, 255, .6);
+		}
+		h1 {
+			font-size: 50px;
+			font-weight: bold;
+			margin: 0;
+		}
+		ul {
+			padding-top: 120px;
+		}
+
+		li {
+			color: #bbb;
+			font-size: 50px;
+			margin: 20px 0;
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<h1>HEADER</h1>
+	</header>
+	<ul>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+		<li>Hello</li>
+	</ul>
+
+	<script>
+		// 헤더가 가장 위에서 조금이라도 떨어지면 검게 바뀌게끔 만들고 싶다.
+		// 필요한 것은 무엇일까
+		// 1. 헤더 선택 2. 스크롤이벤트 3. 바뀌는 기준 4. 색깔바꾸기
+
+		// 어떤 순서로 작용할까.
+		// 0. 헤더 잡기
+		// 1. 이벤트가 발생 - 스크롤이 되면
+		// 2. 색깔 바꿔주는 함수를 실행시켜준다.
+		// 3. 함수 안에는 조건문이 들어간다. 어떤 조건 ? 스크롤이 얼마나 됐는지 (바뀌는 기준)
+		// 4. 이벤트 발생이 끝나면 원복한다.
+
+		var header = document.querySelector('#header');
+		var h1 = document.querySelector('h1');
+
+		function changeColor() {
+			var scrollY = window.scrollY;
+			console.log(scrollY);	
+		}
+
+		window.addEventListener('scroll', changeColor);
+		
+	</script>
+</body>
+</html>

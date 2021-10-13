@@ -1,0 +1,38 @@
+
+<html>
+<head>
+	<style>
+		.box {
+			width: 200px;
+			height: 200px;
+			background: yellowgreen;
+		}
+		.red {
+			background: tomato;
+		}
+		.blue {
+			background: dodgerblue;
+		}
+	</style>
+</head>
+<body>
+	<div id="box" class="box"></div>
+	<button onclick="beRed()">빨강</button>
+	<button onclick="beBlue()">파랑</button>
+
+	<script>
+		var box = document.querySelector('#box');
+
+		function beRed() {
+			box.classList.remove('blue');
+			box.classList.add('red');
+		}
+		
+		function beBlue() {
+			box.classList.remove('red');
+			box.classList.add('blue');
+		}
+
+	</script>
+</body>
+</html>
