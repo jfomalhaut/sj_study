@@ -33,7 +33,7 @@ img {
 }
 
 header {
-  margin: 0 0 20px 0;
+  /* margin: 0 0 20px 0; */
 }
 
 .top-message {
@@ -89,6 +89,10 @@ header {
   display: block;
 }
 
+.paddingTop {
+  padding-top: 83px;
+}
+
 header .middle {
   height: 85px;
   background-image: url("https://res.kurly.com/images/marketkurly/logo/logo_x2.png");
@@ -100,13 +104,23 @@ header .middle {
 header .bottom {
   width: 100%;
   padding-top: 25px;
+  padding-bottom: 20px;
+}
+header .bottom article {
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .stop {
- 
+  position: fixed;
+  height: 83px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
 }
 
 .main_category {

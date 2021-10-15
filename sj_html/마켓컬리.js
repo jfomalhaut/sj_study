@@ -1,4 +1,5 @@
 var bottom = document.querySelector('.bottom');
+var wrapper = document.querySelector('#wrapper');
 var bottomHeight = bottom.offsetTop;
 
 
@@ -7,8 +8,10 @@ function stickyNav() {
   var scrollY = window.scrollY;
   if(scrollY > bottomHeight ) {
     bottom.classList.add('stop');
+    wrapper.classList.add('paddingTop');
   } else {
     bottom.classList.remove('stop');
+    wrapper.classList.remove('paddingTop');
   }
   //stop클래스를 못짜겠음
 }
