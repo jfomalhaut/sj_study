@@ -1,0 +1,79 @@
+<html>
+<head>
+	<style>
+		* {
+			margin: 0; padding: 0; box-sizing: border-box;
+		}
+		.container {
+			/* relative 울타리  */
+			position: relative; 
+			margin: 100px auto;
+			width: 800px;
+			height: 500px;
+			border: 2px solid;
+		}
+		.banner {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 100px;
+			font-weight: bold;
+			color: #fff;
+			opacity: 0;
+			transition: .3s;
+		}
+		.banner:nth-child(1) { background: tomato; }
+		.banner:nth-child(2) { background: yellowgreen; }
+		.banner:nth-child(3) { background: dodgerblue; }
+		.banner:nth-child(4) { background: darkmagenta; }
+		.banner:nth-child(5) { background: mediumseagreen; }
+
+		.active {
+			opacity: 1;
+		}
+
+		nav {
+			text-align: center;
+		}
+
+		button {
+			font-size: 30px;
+			padding: 5px 10px;
+			margin: 0 10px;
+			cursor: pointer;
+			user-select: none;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="banner active">1</div>
+		<div class="banner">2</div>
+		<div class="banner">3</div>
+		<div class="banner">4</div>
+		<div class="banner">5</div>
+	</div>
+	<nav>
+		<button onclick="prev()">Prev</button>
+		<button onclick="next()">Next</button>
+	</nav>
+	<script>
+
+		function prev() {
+
+		}
+
+		function next() {
+
+		}
+
+		var banners = document.querySelectorAll('.banner');
+
+
+	</script>
+</body>
+</html>

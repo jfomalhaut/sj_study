@@ -1,0 +1,18 @@
+<html>
+<head>
+
+</head>
+<body>
+	<button onclick="next()">NEXT</button>
+	<script>
+		var studencts = ['철수', '경수', '민수', '영수', '광수', '준수', '진수', '창수'];
+		var index = 0;
+		
+		function next() {
+			index += 1;
+			index = index % studencts.length;
+			console.log(studencts[index]);
+		}
+	</script>
+</body>
+</html>

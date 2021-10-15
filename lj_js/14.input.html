@@ -1,0 +1,27 @@
+<html>
+<head>
+
+</head>
+<body>
+
+	<input id="input1" type="text" placeholder="아이디를 입력하세요">
+	<input id="input2" type="password" placeholder="insert password">
+	<button onclick="login()">login</button>
+
+	<script>
+		var USERNAME = 'dlwnssla';
+		var PASSWORD = 'dlwns123';
+
+		var username = document.querySelector('#input1');
+		var password = document.querySelector('#input2');
+
+		function login() {
+			var usernameValue = username.value;
+			var passwordValue = password.value;
+			console.log(usernameValue);
+			console.log(passwordValue);
+		}
+
+	</script>
+</body>
+</html>
