@@ -18,10 +18,13 @@
 	<script>
 
 		var box = document.querySelector('#box');
-		// box.style.backgroundColor = '#fff000';
-	
+		var color = document.querySelector('#color');
+		var value = '';
+		
 		function change() {
-
+			value = color.value;
+			box.style.backgroundColor = value;
+			color.value = '';
 		}
 
 	</script>
