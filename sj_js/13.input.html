@@ -1,0 +1,36 @@
+<html>
+  <head></head>
+  <body>
+    <input id="input1" type="text" placeholder="아이디를 입력하세요">
+    <input id="input2" type="password" placeholder="insert password">
+    <button onclick="login()">login</button>
+
+    <script>
+      var USERNAME = '12345';
+      var PASSWORD = '12345';
+
+      var username = document.querySelector('#input1');
+      var password = document.querySelector('#input2');
+
+      function login() {
+        var usernameValue = username.value;
+        var passwordValue = password.value;
+        
+        if(usernameValue === USERNAME && passwordValue === PASSWORD) {
+          console.log('맞습니다');
+        } else {
+          console.log('틀립니다');
+        }
+
+
+      }
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

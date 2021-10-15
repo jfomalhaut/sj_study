@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <style>
+      #here {
+        color: red;
+      }
+      .active {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="check()">Check</button>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1 id="here">Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>
+    <h1>Hello</h1>11
+    <script>
+      var here = document.querySelector('#here');
+      var position = here.offsetTop;
+      console.log(`'position'${position}`);
+           
+      function changeBackground() {
+        var scrollY = window.scrollY;
+        console.log(`'scrollY' ${scrollY}`);
+
+
+
+          if(scrollY > position) {
+            here.classList.add('active');
+          } else {
+            here.classList.remove('active');
+          }
+        }
+
+      window.addEventListener('scroll', changeBackground); 
+      
+
+
+      // 1. 윈도우가 스크롤이 되면 id=here의 배경색이 바뀐다.
+      // 2. 단 스크롤 높이가 오프셋탑만큼 위치할때
+      // 3. 스크롤 높이가 오프셋탑보다 작으면 배경색을 원복해준다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

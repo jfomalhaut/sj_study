@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <style>
+      #box {
+        width: 300px;
+        height: 300px;
+        margin: 200px auto;
+      }
+      .default {
+        background-color: #ddd;
+      }
+      .yellowgreen {
+        background-color: yellowgreen;
+      }
+      .tomato {
+        background-color: tomato;
+      }
+      .violet {
+        background-color: violet;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="box" class="default"></div>
+    <input type="text" placeholder="insert color" id="color">
+    <button onclick="change()">change</button>
+    <script>
+
+      var box = document.querySelector('#box');
+      var color = document.querySelector('#color');
+      
+      function change() {
+        var colorValue = color.value; //value변수는 전역변수 안되는지 ?
+        if(colorValue === 'yellowgreen') {
+          box.classList.remove('tomato');
+          box.classList.remove('violet');
+          box.classList.add('yellowgreen');
+        } else if(colorValue === 'tomato') {
+          box.classList.remove('yellowgreen');
+          box.classList.remove('violet');
+          box.classList.add('tomato');
+        } else if(colorValue === 'violet') {
+          box.classList.remove('yellowgreen');
+          box.classList.remove('tomato');
+          box.classList.add('violet');
+        }
+      }
+
+
+      
+
+   
+
+
+    </script>
+  </body>
+</html>

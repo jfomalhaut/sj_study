@@ -105,10 +105,6 @@ header .bottom {
   align-items: center;
 }
 
-.stop {
- 
-}
-
 .main_category {
   width: 10%;
 }
@@ -243,13 +239,19 @@ article {
 
 .goods_ul {
   display: flex; 
-  flex-wrap: wrap;  
+  max-width: 1000px;
+  margin: 0 auto;
+  /* flex-wrap: wrap;   */
   justify-content: center;
   gap: 20px;
 }
 
+.goods_li {
+  width: 100%;
+}
+
 .type_1 .thumb {
-  width: 249px;
+  /* width: 249px; */
   height: 320px;
   background-image: url("	https://img-cf.kurly.com/shop/data/goods/1470278102426l0.jpg");
   background-size: cover;  
