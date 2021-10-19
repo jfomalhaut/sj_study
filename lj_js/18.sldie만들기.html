@@ -12,7 +12,7 @@
 			height: 300px;
 			box-sizing: border-box;
 			border: 2px solid;
-			/* overflow: hidden; */
+			overflow: hidden;
 		}
 		.banner {
 			position: absolute;
@@ -63,12 +63,26 @@
 	<script>
 
 		var index = 0;
+		var temp = 0;
+		var animate = false;
 		var banners = document.querySelectorAll('.banner');
 
-		function next() {
-			banners[index].style.cssText = 'left: -100%; transition: .3s;';
-			index = (index + 1) % banners.length;
-			banners[index].style.cssText = 'left: 0%; transition: .3s;';
+		function next() { // 작동을 하되, 다 돌아가지 않았을 때에는 작동이 안 되게.
+			console.log(animate);
+			if (!animate) { // animate가 false이면
+				animate = true; // 슬라이드가 시작되면 끝나기 전까지 next 함수를 차단한다.
+				temp = index; // index에 +1 되기 전의 값을 temp에 보관해둔다.
+				index = (index + 1) % banners.length;
+				banners[index].style.cssText = 'left: 100%'; // 다음에 올 슬라이드를 우측으로 이동
+
+				if (banners[index].offsetLeft > 0) { // 제대로 된 위치에 왔을 때에만 작동하게 해준다.
+					banners[temp].style.cssText = 'left: -100%; transition: .3s;'; // 우리가 보고 있던 슬라이드
+					banners[index].style.cssText = 'left: 0%; transition: .3s;'; // 다음에 올 슬라이드
+					setTimeout(function() {
+						animate = false; // 슬라이드가 끝나면 다시 false로 되돌려준다.
+					}, 300);
+				}
+			}
 		}
 
 	</script>
