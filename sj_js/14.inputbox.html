@@ -9,15 +9,7 @@
       .default {
         background-color: #ddd;
       }
-      .yellowgreen {
-        background-color: yellowgreen;
-      }
-      .tomato {
-        background-color: tomato;
-      }
-      .violet {
-        background-color: violet;
-      }
+     
 
     </style>
   </head>
@@ -27,29 +19,19 @@
     <button onclick="change()">change</button>
     <script>
 
-      var box = document.querySelector('#box');
-      var color = document.querySelector('#color');
-      
-      function change() {
-        var colorValue = color.value; //value변수는 전역변수 안되는지 ?
-        if(colorValue === 'yellowgreen') {
-          box.classList.remove('tomato');
-          box.classList.remove('violet');
-          box.classList.add('yellowgreen');
-        } else if(colorValue === 'tomato') {
-          box.classList.remove('yellowgreen');
-          box.classList.remove('violet');
-          box.classList.add('tomato');
-        } else if(colorValue === 'violet') {
-          box.classList.remove('yellowgreen');
-          box.classList.remove('tomato');
-          box.classList.add('violet');
-        }
-      }
+    var box = document.querySelector('#box');
+		var color = document.querySelector('#color');
+	
+		
+		function change() {
+			var value = color.value;
+			box.style.backgroundColor = value;
+			color.value = ''; 
+      // value = ''; 
+		}
 
-
-      
-
+      /////질문
+      /////박스에 value값으로 스타일을 주면 기존의 default는 무시?
    
 
 

@@ -1,0 +1,86 @@
+<html>
+<head>
+	<style>
+		* {
+			margin: 0; padding: 0; box-sizing: border-box;
+		}
+		.container {
+			/* relative 울타리  */
+			position: relative; 
+			margin: 100px auto;
+			width: 500px;
+			height: 300px;
+			box-sizing: border-box;
+			border: 2px solid;
+			/* overflow: hidden; */
+		}
+		.banner {
+			position: absolute;
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 100px;
+			font-weight: bold;
+			color: #fff;
+			/* transition: .3s; */
+			left: 100%;
+		}
+		.banner:nth-child(1) { background: tomato; left: 0; }
+		.banner:nth-child(2) { background: yellowgreen; }
+		.banner:nth-child(3) { background: dodgerblue; }
+		.banner:nth-child(4) { background: darkmagenta; }
+		.banner:nth-child(5) { background: mediumseagreen; }
+
+		nav {
+			text-align: center;
+		}
+		button {
+			font-size: 30px;
+			padding: 10px 20px;
+			margin: 0 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="banner">1</div>
+		<div class="banner">2</div>
+		<div class="banner">3</div>
+		<div class="banner">4</div>
+		<div class="banner">5</div>
+	</div>
+	<nav>
+		<button onclick="prev()">PREV</button>
+		<button onclick="next()">NEXT</button>
+	</nav>
+	<script>
+		var index = 0;
+		var temp = 0;
+		var animate = false;
+		var banners = document.querySelectorAll('.banner');
+
+		function next() { // 작동을 하되, 다 돌아가지 않았을 때에는 작동이 안 되게.
+			console.log(animate);
+			if (!animate) { // animate가 false이면
+				animate = true; // 슬라이드가 시작되면 끝나기 전까지 next 함수를 차단한다.
+				temp = index; // index에 +1 되기 전의 값을 temp에 보관해둔다.
+				index = (index + 1) % banners.length;
+				banners[index].style.cssText = 'left: 100%'; // 다음에 올 슬라이드를 우측으로 이동
+
+				if (banners[index].offsetLeft > 0) { // 제대로 된 위치에 왔을 때에만 작동하게 해준다.
+					banners[temp].style.cssText = 'left: -100%; transition: .3s;'; // 우리가 보고 있던 슬라이드
+					banners[index].style.cssText = 'left: 0%; transition: .3s;'; // 다음에 올 슬라이드
+					setTimeout(function() {
+						animate = false; // 슬라이드가 끝나면 다시 false로 되돌려준다.
+					}, 300);
+				}
+			}
+		}
+  
+
+
+	</script>
+</body>

@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        width: 1000px;
+        margin: 50px auto;
+      }
+      img {
+        width: 100%;
+      }
+      button {
+        padding: 10px 0;
+        width: 100%;
+      }
+      header {
+        width: 100%;
+			  height: 100px;
+			  position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        background: rgba(255, 255, 255, .8);
+        color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+    </style>
+
+  </head>
+  <body>
+    <header>
+      장바구니
+      <h1 id="cartCount">0</h1>개
+    </header>
+    <div id="container"></div>
+    <script>
+      var products =[
+        {id: 1, name: '사과', price: 1000, src: 'img1.jpg'},
+        {id: 2, name: '귤', price: 2000, src: 'img2.jpg'},
+        {id: 3, name: '포도', price: 3000, src: 'img3.jpg'},
+        {id: 4, name: '감', price: 4000, src: 'img4.jpg'},
+        {id: 5, name: '배', price: 5000, src: 'img5.jpg'},
+        {id: 6, name: '멜론', price: 6000, src: 'img6.jpg'},
+        {id: 7, name: '수박', price: 7000, src: 'img7.jpg'},
+        {id: 8, name: '자두', price: 8000, src: 'img8.jpg'},
+        {id: 9, name: '복숭아', price: 9000, src: 'img9.jpg'},
+      ];
+      var cart = [];
+      var container = document.querySelector('#container');
+      var cartCount = document.querySelector('#cartCount');
+      var html = '';
+      var text = '';
+      var nf = new Intl.NumberFormat();
+
+     
+      function detail(id) {
+        window.location = `19.마켓컬리상세.html?id=${id}`;
+      }
+     
+      function setCart() {
+        cartCount.innerHTML = cart.length;
+      }
+
+      var stringCart = '';
+
+      function addToCart(id) {
+        if(cart.indexOf(id) === -1) {
+          cart.push(id);
+          // [1,2,3,4] => '1,2,3,4'
+          stringCart = cart.join(','); // join 메소드: 배열 사이를 ,로 나눠서 문자열로 바꿈
+          localStorage.setItem('cartItem', stringCart);
+          setCart();
+        }
+      }
+
+      function print() {
+        html = '';
+        for (var i = 0; i < products.length; i++) {
+          text = `
+            <div>
+              <img src="img/${products[i].src}" onclick='detail(${products[i].id})'>
+              <h1>${products[i].name}</h1>
+              <h3>${nf.format(products[i].price)}원</h3>
+              <button onclick="addToCart(${products[i].id})">담기</button>
+            </div>
+          `;
+          html = html + text; 
+        }
+
+        container.innerHTML = html;
+      }
+
+      print();
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+  <head>
+  
+  </head>
+  <body>
+    <h1>로그인</h1>
+    <form name="login" onsubmit="return false">
+       <!-- 새로고침 막기위해 리턴쓴다.  -->
+      <input type="text" name="username" placeholder="아이디를 입력하세요">
+      <input type="password" name="password" placeholder="비번을 입력하세요">
+      <input type="submit" value="로그인" onclick="loginTest()">
+    </form>
+
+
+    <script>
+    var form = document.login; // form은 name으로 불러온다.
+
+    function loginTest() {
+      var username = form.username.value; // name으로 불러온다.
+      var pwd = form.password.value; 
+      console.log(username, pwd);
+    }
+ 
+    </script>
+  </body>
+</html>
