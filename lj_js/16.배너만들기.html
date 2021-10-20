@@ -30,6 +30,9 @@
 		.banner:nth-child(3) { background: dodgerblue; }
 		.banner:nth-child(4) { background: darkmagenta; }
 		.banner:nth-child(5) { background: mediumseagreen; }
+		.banner:nth-child(6) { background: black; }
+		.banner:nth-child(7) { background: gary; }
+		.banner:nth-child(8) { background: darkgoldenrod; }
 
 		.active {
 			opacity: 1;
@@ -62,13 +65,17 @@
 		<button onclick="next()">Next</button>
 	</nav>
 	<script>
+		var index = 0;
 
 		function prev() {
 
 		}
 
 		function next() {
-
+			banners[index].classList.remove('active');
+			index = index + 1;
+			index = index % banners.length;
+			banners[index].classList.add('active');
 		}
 
 		var banners = document.querySelectorAll('.banner');

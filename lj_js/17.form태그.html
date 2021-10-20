@@ -1,0 +1,34 @@
+<html>
+<head>
+
+</head>
+<body>
+	<h1>로그인</h1>
+	<form name="login" onsubmit="return false">
+		<input id="user" type="text" name="username" placeholder="아이디를 입력하세요">
+		<input type="password" name="password" placeholder="비밀번호를 입력하세요">
+		<input type="submit" value="로그인" onclick="loginTest()">
+	</form>
+
+	<script>
+
+		var form = document.login;
+		// var user = document.querySelector('#user');
+
+		function loginTest() {
+			var username = form.username.value;
+			var pwd = form.password.value;
+			console.log(username, pwd);
+		}
+		
+		// function onkeypress(ev) {
+		// 	if (ev.keyCode === 13) {
+		// 		alert('Enter쳤음..');
+		// 	}
+		// }
+
+		// user.addEventListener('keypress', onkeypress);
+
+	</script>
+</body>
+</html>
