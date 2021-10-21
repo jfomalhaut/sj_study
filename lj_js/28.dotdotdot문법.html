@@ -1,0 +1,24 @@
+<html>
+<body>
+	<script>
+		// 스프레드 문법
+		// Spread 문법이란? Spread 는 우리말로 '펴다, 펼쳐지다' 의미를 가집니다.
+
+		var students = ['민수', '철수', '경수', '명수', '광수'];
+
+		var stu2 = [ ...students, '병수' ];
+		console.log(stu2);
+
+		var obj = {
+			name: '고창',
+			area: '전라북도',
+			unit: '군',
+			specialties: '장어/수박',
+		};
+
+		var obj2 = { ...obj, hero: '강수지' };
+		console.log(obj2);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<body>
+	<script>
+		var students = ['민수', '철수', '경수', '명수', '광수'];
+		// 1. 경수를 동수로 바꿔보세요
+		// 2. 명수를 빼보세요.
+		// 3. 병수를 추가해보세요.
+
+		var copy = [];
+
+		for (var i = 0; i < students.length; i++) {
+			if (students[i] !== '경수') {
+				copy.push(students[i]);
+			} else {
+				copy.push('동수');
+			}
+		}
+		console.log(copy);
+	</script>
+</body>
+</html>

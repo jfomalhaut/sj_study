@@ -1,49 +1,45 @@
 <html>
-<body>
-	<h1 id="count">0</h1>
-	<button onclick="start()">
-		<h1>start!</h1>
-	</button>
-	<button onclick="stop()">
-		<h1>stop!</h1>
-	</button>
-	<button onclick="reset()">
-		<h1>reset!</h1>
-	</button>
+  <head>
+
+  </head>
+  <body>
+    <h1 id="count">0</h1>
+		<button onclick="start()"><h1>start!</h1></button>
+		<button onclick="stop()"><h1>stop</h1></button>
+		<button onclick="reset()"><h1>reset</h1></button>
 	<script>
+		var count = document.querySelector('#count');
+		var delay = 1000;
+		var index = 0;
 		var interval;
-		var delay = 500;
-		var count = 0;
-		var countElement = document.querySelector('#count');
+
+		// start 버튼을 클릭하면 setInterval 함수가 실행된다.
+		// setInterval함수는 1초마다 count가 1씩 증가한다.
+		function countUp() {
+			count.innerHTML = index ++;
+		}
 
 		function start() {
-			clearInterval(interval);
-			interval = setInterval(repeat, delay);
+			interval = setInterval(countUp,delay);
 		}
-
-		function repeat() {
-			countUp();
-		}
-
-		function countUp() {
-			count = count + 1;
-			print();
-		}
-
-		function print() {
-			countElement.innerHTML = count;
-		}
-
+		
 		function stop() {
 			clearInterval(interval);
 		}
 
 		function reset() {
-			stop();
-			count = 0;
-			print();
-		}
+			clearInterval(interval);
+			count.innerHTML = 0;
+			index = 0;
+		}		
+		
+	
+	
 
+
+
+
+		
 		// 숙제
 		// 1. 숫자가 점점 커지는 기능 구현 (O)
 		// 2. 여러번 눌러도 1초마다(일정한 속도로) 증가하게 만들기
@@ -61,5 +57,5 @@
 		// 3. 슬라이드 멈춤 버튼 만들기.
 
 	</script>
-</body>
+  </body>
 </html>
