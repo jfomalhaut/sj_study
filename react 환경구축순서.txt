@@ -12,7 +12,7 @@
 	4) .gitignore => 깃에 업로드를 할 때, 업로드하지 않는 파일이나 폴더명을 써주는 곳
 3. 라이브러리 설치
 	1) 리엑트
-		$ npm i -s react react-router react-router-dom
+		$ npm i -s react react-dom react-router-dom
 	2) Babel
 		$ npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/polyfill
 	3) webpack
@@ -28,3 +28,6 @@
 
 7. .gitignore 작성
 	=> git 저장소에 업로드할 때 제외할 폴더나 파일을 쓴다.
+
+8. 최종적으로 dist/index.html과 
+	src폴더 안에 index.js를 작성해준다.
