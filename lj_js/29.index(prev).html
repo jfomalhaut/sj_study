@@ -1,0 +1,29 @@
+<html>
+<body>
+	<div class="container">
+
+	</div>
+	<button onclick="prev()">prev</button>
+	<button onclick="next()">next</button>
+	<script>
+		var length = 5;
+		var index = 0;
+
+		function prev() {
+			index = index - 1; // -1이 될 때가 있다.
+			if (index < 0) {
+				index = 4;
+			}
+			console.log(index);
+		}
+
+		function next() {
+			index = index + 1; // 5가 될 때가 있다.
+			if (index > 4) {
+				index = 0;
+			}
+			console.log(index);
+		}
+	</script>
+</body>
+</html>

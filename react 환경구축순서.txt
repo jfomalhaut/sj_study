@@ -1,0 +1,30 @@
+1. 프로젝트를 만들어준다.
+	$ npm init -y
+2. 폴더트리 및 파일을 만들어준다.
+	폴더 -> dist, src
+	파일 -> webpack.config.js, .gitigore
+	1) dist => 내가 만든 프로젝트를 압축해서 내보내주는 곳 (bundle.js가 생성되는 곳)
+	2) src => React로 코드를 짜는 곳
+	3) webpack.config.js
+		=> 내가 webpack으로 압축을 할 때 어떻게 할 것인지에 대한 가이드 파일이다.
+		=> webpack.config.js를 기반으로 압축을 한다.
+		=> webpack은 develope용 서버도 제공하는데, 이에 대한 내용도 있다.
+	4) .gitignore => 깃에 업로드를 할 때, 업로드하지 않는 파일이나 폴더명을 써주는 곳
+3. 라이브러리 설치
+	1) 리엑트
+		$ npm i -s react react-router react-router-dom
+	2) Babel
+		$ npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/polyfill
+	3) webpack
+		$ npm i -D webpack webpack-cli webpack-dev-server
+
+4. package.json 에 babel 세팅을 해준다.
+
+5. 실행 스크립트 추가
+	1) start => 우리가 개발용 서버를 실행할 때 사용하는 스크립트
+	2) build => 배포용 bundle.js를 만들 때 사용하는 스크립트
+
+6. webpack.conifg.js 작성
+
+7. .gitignore 작성
+	=> git 저장소에 업로드할 때 제외할 폴더나 파일을 쓴다.
