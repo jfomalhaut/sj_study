@@ -21,23 +21,17 @@
       var fruits = ['사과', '바나나'];
       //1. 배열 끝에 항목 추가하기
       fruits.push('오렌지');
-      console.log(fruits);
       //2. 배열 끝에 항목 삭제하기
       fruits.pop();
-      console.log(fruits);
       //3. 배열 맨앞에서 항목 삭제하기
       fruits.shift();
-      console.log(fruits);
       //4. 배열 맨앞에서 항목 추가하기
       fruits.unshift('사과');
-      console.log(fruits);
       //5. 배열 안 항목의 인덱스 찾기
       fruits.push('망고');
       let findIndex = fruits.indexOf('바나나');
-      console.log(findIndex);
       //6. 특정 위치에 있는 항목 제거하기
       let removedItem = fruits.splice(findIndex,1);
-      console.log(removedItem);
       //7. 특정 위치에서 여러개 항목 제거하기
       let vegetables = ['양배추', '순무', '무', '당근']
       let pos = 1
@@ -46,7 +40,6 @@
       let removedItems = vegetables.splice(pos, n);
       //8. 배열 복사하기
       let shallowCopy = vegetables.slice();
-      console.log(shallowCopy);
      
 
 

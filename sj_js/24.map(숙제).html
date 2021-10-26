@@ -1,0 +1,44 @@
+<html>
+  <body>
+
+    <script>
+      var students = ['민수', '철수', '경수', '명수', '광수' ];
+      // map, filter, concat
+      // 수정, 삭제, 추가
+
+      var newStu = students.map (item => {
+        if (item === '경수') {
+          return '동수';
+        } else {
+          return item;
+        }
+      });
+
+      var newStu2 = students.map(item => item === '경수' ? '동수' : item);
+      
+      console.log(newStu2);
+
+
+      // 숙제
+      // [10, 20, 23, 40, 50]
+      // map을 이용해 위 배열 중에 10의 배수가 아닌 것은 빼고 100을 넣어서 새로운 배열에 담으세요.
+
+      var arr = [10, 20, 23, 40, 50];
+      var newArr = arr.map(item => item % 10 === 0 ? item : 100);
+      
+      console.log(newArr);
+
+      
+
+      
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
