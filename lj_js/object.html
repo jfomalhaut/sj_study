@@ -1,0 +1,19 @@
+<html>
+<body>
+	<script>
+		const group = {
+			leader: {
+				name: '강호동',
+				age: 40,
+				height: 180,
+				weight: 100
+			}
+		};
+
+		// const { name, age, height, weight } = man;
+		const { leader: { name, age, height, weight } } = group;
+		console.log(name);
+
+	</script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import Phonebook from './pages/Phonebook';
 
 // function Test() {
 // 	return (
@@ -8,4 +9,4 @@ import App from './App';
 // 	)
 // }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<Phonebook />, document.querySelector('#root'));
