@@ -2,7 +2,7 @@ import React from 'react';
 
 const List = ({ history, math, location }) => {
 	const goHome = () => {
-		history.push('/home');
+		history.push('/list');
 	};
 	return (
 		<div>

@@ -50,16 +50,17 @@
       var cart = [];
       
       function deleteAllBtn() {
-        var cartItem = localStorage.removeItem('cartItem');
-        cart.splice(0);
+        var cartItem = localStorage.removeItem('cartItem'); 
+        cart = [];
         print();        
       }
 
       function delBtn(id) {
-        var deleteItem = cart.filter(item => item.id === id)[0].id; // 1
-       
-
-
+        var cartItem = cart.filter(item => item.id !== id);
+        cart = cartItem;
+        var cartIds = cart.map(item => item.id); //[1,5]
+        var stringCart = cartIds.join(',');
+        localStorage.setItem('cartItem', stringCart);
         print();
       }
 
@@ -67,8 +68,8 @@
       init();
       
       function init() {
-        var cartItem = localStorage.getItem('cartItem');
-        var cartIds = cartItem.split(',').map(item => Number(item)); //[1,2,5,7]
+        var cartItem = localStorage.getItem('cartItem'); //'5,4'
+        var cartIds = cartItem.split(',').map(item => Number(item)); //[5,4]
         cart = products.filter(item => cartIds.indexOf(item.id) !== -1);
         print();
       }
@@ -94,29 +95,6 @@
      
       
 
-      
-      
-      // 상품 삭제
-      // 전체 상품 삭제
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       
       
       
