@@ -1,6 +1,6 @@
 import React from 'react';
 
-const List = ({ history, math, location }) => {
+const List = ({ history, match, location }) => {
 	const goHome = () => {
 		history.push('/list');
 	};

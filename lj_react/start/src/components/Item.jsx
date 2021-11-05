@@ -18,7 +18,9 @@ const Item = ({ item }) => {
 	};
 
 	return (
-		<ItemsComponent>
+		<ItemsComponent className={type === 1 ? 'blue' : type === 2 ? 'red' : 'green'}>
+			{/* <figure className={`type${type}`} /> */}
+			{/* <figure className={`type${type}`} /> */}
 			<figure />
 			<article>
 				<span>{transType(type)}</span>
@@ -36,5 +38,20 @@ const ItemsComponent = styled.li`
 	figure {
 		height: 100px;
 		background: #ddd;
+	}
+	&.blue {
+		figure {
+			background: dodgerblue;
+		}
+	}
+	&.red {
+		figure {
+			background: tomato;
+		}
+	}
+	&.green {
+		figure {
+			background: green;
+		}
 	}
 `;
