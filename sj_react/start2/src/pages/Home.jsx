@@ -18,8 +18,6 @@ const Home = ({history, match, location}) => { //history, match, location 모르
     </div>
   )
 
-
-
 };
 
 

@@ -6,4 +6,4 @@ import Phonebook from './pages/Phonebook';
 
 
 
-ReactDOM.render(<Phonebook />, document.querySelector('#root'));
+ReactDOM.render(<App />, document.querySelector('#root'));
