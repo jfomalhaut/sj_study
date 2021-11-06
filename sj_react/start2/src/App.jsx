@@ -20,14 +20,16 @@ const App = () => {
         <Link to='/address'>Address</Link>
       </header>
       <Switch>
-        <Route path="/address" component={Address} />
         <Route path="/home" component={Home} />
         <Route path="/list" component={List} />
         <Route path="/cart" component={Cart} />
         {/* <Route path="/product" component={Product} /> */}
         <Route path="/product/:category" render={(props) => (
           <Product history={props.history} match={props.match} / >
-        )} />
+        )} 
+          
+        />
+        <Route path="/address" component={Address} />
         <Redirect to="/home" /> 
       </Switch>
     </BrowserRouter>
