@@ -16,6 +16,7 @@ const Address = () => {
   const onSubmit = async (ev) => {
     ev.preventDefault();
     const {data: {results: {common, juso}}} = await axios.get(`${JUSO_URL}?confmKey=${API_KEY}&currentPage=1&countPerPage=10&resultType=json&keyword=${keyword}`);
+    // Q.data 변수명 
     setList(juso);
   };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 
 const List = ({ history, match, location}) => {
+  
   const goHome = () => {
     history.push('/home');
   }

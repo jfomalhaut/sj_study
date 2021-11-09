@@ -14,8 +14,6 @@ const Item = ({item}) => {
     }
   };
 
-
-
   return (
     <ItemsComponent className={type === 1 ? 'blue' : type === 2 ? 'red' : 'green'} >
       {/* <figure className={`type${type}`}/> */}

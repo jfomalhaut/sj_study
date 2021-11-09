@@ -18,13 +18,12 @@ const Product = ({ history, match }) => {
     }
   }
 
-
-
   useEffect(() => {
     // if(category === 'fish') {
     //   const result = Items.filter(item => item.type === 1);
     //   setList(result);
-    // }
+    // } 
+
     if (category === 'all') {
       setList(Items);
       return;
@@ -52,11 +51,6 @@ const Product = ({ history, match }) => {
     </ProductComponent>
   );
 };
-
-
-
-
-
 
 
 

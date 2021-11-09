@@ -7,6 +7,6 @@ import Product from './pages/Product';
 
 
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<Phonebook/>, document.querySelector('#root'));
 
 
