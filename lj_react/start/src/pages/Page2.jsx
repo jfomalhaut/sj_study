@@ -1,19 +1,27 @@
-import React, { useReducer } from 'react';
-import CounterReducer from '../reducers/CounterReducer';
+import React, {useState} from 'react';
 
 const Page2 = () => {
-	const [count, dispatch] = useReducer(CounterReducer, 10);
-	const decrease = () => {
-		dispatch({ type: 'minus' });
-	};
-
+	const [ qty, setQty ] = useState(0);
+	
+	const onChange = (ev) => {
+		setQty(ev.target.value);
+	}
+	
 	return (
 		<div>
 			<h1>Page2 Component</h1>
-			<h1>Count: {count}</h1>
-			<button onClick={decrease}>감소</button>
+			<input value={qty} onChange={onChange}  />
+			<button></button>
 		</div>
 	);
-};
+
+}
+
+
+
+
+
+
 
 export default Page2;
+

@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <style>
+      #container {
+        width: 800px;
+        margin: 50px auto;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+      }
+      img {
+        height: 100px;
+      }
+      h5 {
+        width: 500px;
+        flex-shrink: 0;
+        padding: 0 20px;
+      }
+      button {
+        font-size: 20px;
+        padding: 5px 10px;
+        margin-left: auto;
+        margin-right: 20px;
+      }
+      </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <button onclick="deleteAllBtn()">전체삭제</button>
+    <script>
+      var products = [
+        { id: 1, name: '사과', price: 1000, src: 'img1.jpg' },
+        { id: 2, name: '귤', price: 2000, src: 'img2.jpg' },
+        { id: 3, name: '포도', price: 3000, src: 'img3.jpg' },
+        { id: 4, name: '감', price: 4000, src: 'img4.jpg' },
+        { id: 5, name: '배', price: 5000, src: 'img5.jpg' },
+        { id: 6, name: '멜론', price: 6000, src: 'img6.jpg' },
+        { id: 7, name: '수박', price: 7000, src: 'img7.jpg' },
+        { id: 8, name: '자두', price: 8000, src: 'img8.jpg' },
+        { id: 9, name: '복숭아', price: 9000, src: 'img9.jpg' },
+      ];
+      var container = document.querySelector('#container');
+      var cart = [];
+      var cartItem;
+      var cartIds;
+
+      
+      // local에 아이템을 가져온다.
+      // cart안에 담아준다
+      // print한다.
+
+      function deleteAllBtn() {
+        // 로컬에 있는 아이템을 전부 지운다.
+        // 카트를 비워준다.
+        var cartItem = localStorage.removeItem('cartItem');
+        cart = [];
+        print();
+      }
+
+      function deltetBtn(id) {
+        //카트에 내가 클릭한 상품을 빼고 남긴다.
+        //로컬에 다시 저장한다.
+        //프린트 한다.
+        var cartItem = cart.filter(item => item.id !== id );
+        cart = cartItem;
+        cartIds = cart.map(item => item.id);
+        strinCart = JSON.stringify(cartIds);
+        localStorage.setItem('cartItem', strinCart);
+        print();
+      }
+
+      init();
+      function init() {
+        cartItem = localStorage.getItem('cartItem');
+        cartIds = JSON.parse(cartItem); //[1,2,3]
+        cart = products.filter(item => cartIds.indexOf(item.id) !== -1);
+        print();
+      }
+
+      var html = '';
+      var text = '';
+
+      function print() {
+        html = ''
+        for ( var i = 0; i < cart.length; i++) {
+          text = `
+            <li>
+              <img src="img/${cart[i].src}"/>
+              <h5>${cart[i].name}</h5>
+              <button onclick="deltetBtn(${cart[i].id})">삭제</button>
+            </li>
+          `;
+          html = html + text;
+        }
+        container.innerHTML = html;
+      }
+
+    </script>
+  </body>
+</html>
